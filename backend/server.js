@@ -63,6 +63,11 @@ app.use((err, req, res, next) => {
   res.status(500).json({ message: 'Something went wrong!' });
 });
 
+// Health check (root)
+app.get('/', (req, res) => {
+  res.json({ message: 'API running' });
+});
+
 // 404 handler
 app.use('*', (req, res) => {
   res.status(404).json({ message: 'Route not found' });
