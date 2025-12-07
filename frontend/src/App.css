@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f6f9fb;
+}
+
+.app-container {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  background: #f6f9fb;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .app-container {
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .app-container {
+    flex-wrap: wrap;
+    height: auto;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+    gap: 2rem;
+    height: auto;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-container {
+    gap: 1.5rem;
+  }
+}

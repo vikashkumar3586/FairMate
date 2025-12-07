@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <style>
+      .bg { fill: #22a06b; }
+      .txt { fill: #ffffff; font-weight: 700; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+    </style>
+  </defs>
+  <circle class="bg" cx="32" cy="32" r="28" />
+  <text class="txt" x="32" y="32" font-size="28" text-anchor="middle" dominant-baseline="middle">S</text>
+</svg>

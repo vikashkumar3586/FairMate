@@ -1,0 +1,208 @@
+/* Base Styles */
+.dashboard-root {
+  min-height: 100vh;
+  background: #f6f9fb;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+.dashboard-main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+  box-sizing: border-box;
+}
+
+/* Welcome Section */
+.dashboard-welcome {
+  margin-bottom: 2rem;
+}
+
+.dashboard-welcome h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 0.2rem;
+}
+
+.dashboard-welcome .wave {
+  font-size: 1.7rem;
+}
+
+.dashboard-welcome p {
+  color: #7b8a99;
+  font-size: 1.1rem;
+  margin-bottom: 0;
+}
+
+/* Stats Cards Section */
+.dashboard-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Main Content Area - Two Columns */
+.dashboard-content {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+/* Left Column - Recent Expenses */
+.dashboard-left {
+  flex: 7;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Right Column - Quick Actions */
+.dashboard-right {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Quick Actions Section */
+.dashboard-actions {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 16px rgba(34, 160, 107, 0.08);
+  padding: 2rem 1.5rem;
+  height: fit-content;
+  border: 1.5px solid #f2f6f4;
+  position: sticky;
+  top: 90px;
+}
+
+.dashboard-actions h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.action-btn {
+  background: #f4f7f9;
+  border: 1px solid #e0e6ed;
+  color: #22a06b;
+  font-weight: 600;
+  border-radius: 7px;
+  padding: 0.7rem 1.1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+  transition: all 0.2s;
+  text-align: left;
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+.action-btn:hover {
+  background: #e6f7ee;
+  transform: translateY(-1px);
+}
+
+.action-btn.primary {
+  background: #22a06b;
+  color: white;
+  height: auto;
+  border-color: #22a06b;
+}
+
+.action-btn.primary:hover {
+  background: #1a8f5a;
+  border-color: #1a8f5a;
+}
+
+/* Loading */
+.loading {
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 3rem 0;
+  color: #555;
+}
+
+/* ============================= */
+/* Responsive Enhancements Below */
+/* ============================= */
+
+@media (max-width: 1200px) {
+  .dashboard-main {
+    padding: 2rem 1rem;
+  }
+
+  .dashboard-summary {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .dashboard-content {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .dashboard-left,
+  .dashboard-right {
+    flex: 1 1 100%;
+  }
+
+  .dashboard-actions {
+    position: static;
+  }
+
+  .dashboard-summary {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .dashboard-main {
+    padding: 1.5rem 0.8rem;
+  }
+
+  .dashboard-welcome h1 {
+    font-size: 1.7rem;
+  }
+
+  .dashboard-welcome p {
+    font-size: 0.95rem;
+  }
+
+  .dashboard-summary {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .action-btn {
+    font-size: 0.95rem;
+    padding: 0.6rem 1rem;
+  }
+
+  .dashboard-actions h2 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .dashboard-main {
+    padding: 1rem 0.5rem;
+  }
+
+  .dashboard-welcome h1 {
+    font-size: 1.5rem;
+  }
+
+  .action-btn {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
+  .dashboard-actions {
+    padding: 1rem;
+  }
+}
